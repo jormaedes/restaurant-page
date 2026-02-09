@@ -102,4 +102,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Live Demo**: [ waiting ]
+**Live Demo**: [jormaedes.github.io/restaurant-page/](https://jormaedes.github.io/restaurant-page/)
