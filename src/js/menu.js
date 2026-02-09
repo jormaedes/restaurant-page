@@ -1,4 +1,4 @@
-export function createMenu() {
+function createMenu() {
 	const menu = document.createElement('main');
 	menu.classList.add('container-menu');
 	menu.innerHTML = `<h2>Our Menu</h2>`;
@@ -19,4 +19,16 @@ export function createMenu() {
 	dishes += `</div>`;
 	menu.innerHTML += dishes;
 	return (menu);
+}
+
+export function renderMenuPage(content, target) {
+	const activeBtn = document.querySelector('.active');
+	if (activeBtn)
+		activeBtn.classList.remove('active');
+	while (content.firstChild) {
+		content.removeChild(content.firstChild);
+	}
+	target.classList.add('active');
+	content.textContent = '';
+	content.appendChild(createMenu());
 }
