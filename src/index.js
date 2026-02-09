@@ -1,5 +1,5 @@
 import './style.css';
-import { createHome } from './js/home';
+import { renderHomePage } from './js/home';
 import { createFooter } from './js/create-footer';
 import { renderMenuPage } from './js/menu';
 import { renderAboutPage } from './js/about';
@@ -10,28 +10,8 @@ const menuBtn = document.getElementById('menu-btn');
 const aboutBtn = document.getElementById('about-btn');
 const body = document.querySelector('body'); 
 
-homeBtn.addEventListener('click', () => {
-	const activeBtn = document.querySelector('.active');
-	if (activeBtn)
-		activeBtn.classList.remove('active');
-	while (content.firstChild) {
-		content.removeChild(content.firstChild);
-	}
-	homeBtn.classList.add('active');
-	content.textContent = '';
-	content.appendChild(createHome());
-	const btnOpenMenu = document.querySelector("#open-menu");
-	btnOpenMenu.addEventListener('click', () => {
-		const activeBtn = document.querySelector('.active');
-		if (activeBtn)
-			activeBtn.classList.remove('active');
-		while (content.firstChild) {
-			content.removeChild(content.firstChild);
-		}
-		menuBtn.classList.add('active');
-		content.textContent = '';
-		content.appendChild(createMenu());
-	});
+homeBtn.addEventListener('click', (e) => {
+	renderHomePage(content, e.target, menuBtn);
 });
 
 menuBtn.addEventListener('click', (e) => {
