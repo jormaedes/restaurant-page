@@ -19,9 +19,22 @@ homeBtn.addEventListener('click', () => {
 	content.textContent = '';
 	content.appendChild(createHome());
 	content.appendChild(createFooter());
+	const btnOpenMenu = document.querySelector("#open-menu");
+	btnOpenMenu.addEventListener('click', () => {
+		const activeBtn = document.querySelector('.active');
+		if (activeBtn)
+			activeBtn.classList.remove('active');
+		while (content.firstChild) {
+			content.removeChild(content.firstChild);
+		}
+		menuBtn.classList.add('active');
+		content.textContent = '';
+		content.appendChild(createMenu());
+		content.appendChild(createFooter());
+	});
 });
 
-menuBtn.addEventListener('click', () =>{
+menuBtn.addEventListener('click', () => {
 	const activeBtn = document.querySelector('.active');
 	if (activeBtn)
 		activeBtn.classList.remove('active');
