@@ -8,6 +8,7 @@ const content = document.getElementById('content');
 const homeBtn = document.getElementById('home-btn');
 const menuBtn = document.getElementById('menu-btn');
 const aboutBtn = document.getElementById('about-btn');
+const body = document.querySelector('body'); 
 
 homeBtn.addEventListener('click', () => {
 	const activeBtn = document.querySelector('.active');
@@ -19,7 +20,6 @@ homeBtn.addEventListener('click', () => {
 	homeBtn.classList.add('active');
 	content.textContent = '';
 	content.appendChild(createHome());
-	content.appendChild(createFooter());
 	const btnOpenMenu = document.querySelector("#open-menu");
 	btnOpenMenu.addEventListener('click', () => {
 		const activeBtn = document.querySelector('.active');
@@ -31,7 +31,6 @@ homeBtn.addEventListener('click', () => {
 		menuBtn.classList.add('active');
 		content.textContent = '';
 		content.appendChild(createMenu());
-		content.appendChild(createFooter());
 	});
 });
 
@@ -45,7 +44,6 @@ menuBtn.addEventListener('click', () => {
 	menuBtn.classList.add('active');
 	content.textContent = '';
 	content.appendChild(createMenu());
-	content.appendChild(createFooter());
 });
 
 aboutBtn.addEventListener('click', () => {
@@ -58,5 +56,5 @@ aboutBtn.addEventListener('click', () => {
 	aboutBtn.classList.add('active');
 	content.textContent = '';
 	content.appendChild(creatAbout());
-	content.appendChild(createFooter());
 });
+
