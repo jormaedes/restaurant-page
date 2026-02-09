@@ -2,6 +2,7 @@ import './style.css';
 import { createHome } from './js/home';
 import { createFooter } from './js/create-footer';
 import { createMenu } from './js/menu';
+import { creatAbout } from './js/about';
 
 const content = document.getElementById('content');
 const homeBtn = document.getElementById('home-btn');
@@ -44,5 +45,18 @@ menuBtn.addEventListener('click', () => {
 	menuBtn.classList.add('active');
 	content.textContent = '';
 	content.appendChild(createMenu());
+	content.appendChild(createFooter());
+});
+
+aboutBtn.addEventListener('click', () => {
+	const activeBtn = document.querySelector('.active');
+	if (activeBtn)
+		activeBtn.classList.remove('active');
+	while (content.firstChild) {
+		content.removeChild(content.firstChild);
+	}
+	aboutBtn.classList.add('active');
+	content.textContent = '';
+	content.appendChild(creatAbout());
 	content.appendChild(createFooter());
 });
