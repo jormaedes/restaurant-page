@@ -1,7 +1,7 @@
 import './style.css';
 import { createHome } from './js/home';
 import { createFooter } from './js/create-footer';
-import { createMenu } from './js/menu';
+import { renderMenuPage } from './js/menu';
 import { creatAbout } from './js/about';
 
 const content = document.getElementById('content');
@@ -34,16 +34,8 @@ homeBtn.addEventListener('click', () => {
 	});
 });
 
-menuBtn.addEventListener('click', () => {
-	const activeBtn = document.querySelector('.active');
-	if (activeBtn)
-		activeBtn.classList.remove('active');
-	while (content.firstChild) {
-		content.removeChild(content.firstChild);
-	}
-	menuBtn.classList.add('active');
-	content.textContent = '';
-	content.appendChild(createMenu());
+menuBtn.addEventListener('click', (e) => {
+	renderMenuPage(content, e.target);
 });
 
 aboutBtn.addEventListener('click', () => {
