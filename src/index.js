@@ -22,3 +22,9 @@ aboutBtn.addEventListener('click', (e) => {
 	renderAboutPage(content, e.target);
 });
 
+function firstRender() {
+	body.appendChild(createFooter());
+	renderHomePage(content, homeBtn, menuBtn);
+}
+
+firstRender();
