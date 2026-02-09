@@ -1,0 +1,52 @@
+:root {
+	--primary-color: #0C161F;
+	--secondary-color: #F8BB67;
+	--white-color: #FFFFFF;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	background: var(--primary-color);
+	color: var(--white-color);
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.container nav {
+	display: flex;
+	gap: 20px;
+}
+
+.container nav button:not(.active){
+	color: var(--white-color);
+}
+
+.container nav button{
+	background: none;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.container nav button:hover {
+	color: var(--primary-color);
+	background: var(--secondary-color);
+	border-radius: 10px;
+}
+
+.active {
+	color: var(--secondary-color);
+}
