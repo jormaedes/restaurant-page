@@ -2,7 +2,7 @@ import './style.css';
 import { createHome } from './js/home';
 import { createFooter } from './js/create-footer';
 import { renderMenuPage } from './js/menu';
-import { creatAbout } from './js/about';
+import { renderAboutPage } from './js/about';
 
 const content = document.getElementById('content');
 const homeBtn = document.getElementById('home-btn');
@@ -38,15 +38,7 @@ menuBtn.addEventListener('click', (e) => {
 	renderMenuPage(content, e.target);
 });
 
-aboutBtn.addEventListener('click', () => {
-	const activeBtn = document.querySelector('.active');
-	if (activeBtn)
-		activeBtn.classList.remove('active');
-	while (content.firstChild) {
-		content.removeChild(content.firstChild);
-	}
-	aboutBtn.classList.add('active');
-	content.textContent = '';
-	content.appendChild(creatAbout());
+aboutBtn.addEventListener('click', (e) => {
+	renderAboutPage(content, e.target);
 });
 
