@@ -8,9 +8,13 @@ const menuBtn = document.getElementById('menu-btn');
 const aboutBtn = document.getElementById('about-btn');
 
 homeBtn.addEventListener('click', () => {
+	const activeBtn = document.querySelector('.active');
+	if (activeBtn)
+		activeBtn.classList.remove('active');
 	while (content.firstChild) {
 		content.removeChild(content.firstChild);
 	}
+	homeBtn.classList.add('active');
 	content.textContent = '';
 	content.appendChild(createHome());
 	content.appendChild(createFooter());
