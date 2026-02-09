@@ -1,4 +1,4 @@
-export function creatAbout() {
+function creatAbout() {
 	const about = document.createElement('main');
 	about.classList.add('container-about');
 	about.innerHTML = `
@@ -23,4 +23,16 @@ export function creatAbout() {
 		</div>
 	`;
 	return (about);
+}
+
+export function renderAboutPage(content, target) {
+	const activeBtn = document.querySelector('.active');
+	if (activeBtn)
+		activeBtn.classList.remove('active');
+	while (content.firstChild) {
+		content.removeChild(content.firstChild);
+	}
+	target.classList.add('active');
+	content.textContent = '';
+	content.appendChild(creatAbout());
 }
