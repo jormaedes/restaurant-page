@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" width="320" height="280">
+
+
+  <!-- Outer decorative circle -->
+  <circle cx="160" cy="100" r="68" fill="none" stroke="#C9A84C" stroke-width="0.6" opacity="0.5"/>
+  <circle cx="160" cy="100" r="60" fill="none" stroke="#C9A84C" stroke-width="0.3" opacity="0.3"/>
+
+  <!-- Cloche dome -->
+  <path d="M114 108 Q114 68 160 68 Q206 68 206 108" fill="none" stroke="#8B5E3C" stroke-width="1.4" stroke-linecap="round"/>
+  <line x1="108" y1="108" x2="212" y2="108" stroke="#8B5E3C" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M100 116 Q160 122 220 116" fill="none" stroke="#8B5E3C" stroke-width="1.0" stroke-linecap="round"/>
+
+  <!-- Handle -->
+  <circle cx="160" cy="72" r="5" fill="none" stroke="#8B5E3C" stroke-width="1.2"/>
+  <circle cx="160" cy="72" r="2" fill="#8B5E3C"/>
+
+  <!-- Steam -->
+  <path d="M148 62 Q146 56 148 50 Q150 44 148 38" fill="none" stroke="#C9A84C" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+  <path d="M160 60 Q158 54 160 48 Q162 42 160 36" fill="none" stroke="#C9A84C" stroke-width="0.8" stroke-linecap="round" opacity="0.8"/>
+  <path d="M172 62 Q174 56 172 50 Q170 44 172 38" fill="none" stroke="#C9A84C" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Dots -->
+  <circle cx="160" cy="32" r="1.5" fill="#C9A84C" opacity="0.7"/>
+  <circle cx="228" cy="100" r="1.5" fill="#C9A84C" opacity="0.7"/>
+  <circle cx="92" cy="100" r="1.5" fill="#C9A84C" opacity="0.7"/>
+
+  <!-- Horizontal rule -->
+  <line x1="80" y1="148" x2="240" y2="148" stroke="#C9A84C" stroke-width="0.4" opacity="0.6"/>
+  <polygon points="160,144 163,148 160,152 157,148" fill="#C9A84C" opacity="0.8"/>
+
+  <!-- Name -->
+  <text x="160" y="178" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="300" fill="#1A1A1A" text-anchor="middle" letter-spacing="10">MAISON</text>
+
+  <!-- Divider -->
+  <line x1="128" y1="192" x2="192" y2="192" stroke="#C9A84C" stroke-width="0.5" opacity="0.7"/>
+
+  <!-- Tagline -->
+  <text x="160" y="212" font-family="'Jost', Arial, sans-serif" font-size="8.5" font-weight="300" fill="#8B7355" text-anchor="middle" letter-spacing="4">FINE DINING</text>
+</svg>
