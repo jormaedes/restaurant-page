@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-	--primary-color: #0C161F;
-	--secondary-color: #F8BB67;
-	--white-color: #FFFFFF;
+	--bg: #0F0F0F;
+    --surface: #1A1A1A;
+    --surface2: #222222;
+    --border: #2E2E2E;
+    --text: #F2EBD9;
+    --text-muted: #9A8E7A;
+    --gold: #C9A84C;
+    --gold-dim: rgba(201,168,76,0.15);
+    --copper: #8B5E3C;
+	--font-heading: "Cormorant Garamond", serif;
+	--font-body: "Jost", sans-serif;
 }
 
 * {
@@ -14,6 +24,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	font-family: var(--font-body);
+	color: var(--text);
 }
 
 header {
@@ -185,18 +197,44 @@ header {
 }
 
 footer {
-	width: 100%;
-	background: var(--primary-color);
-	color: var(--white-color);
-	text-align: center;
-	padding: 20px;
+	background: var(--border);
+	padding: 20px 0;
 }
 
-footer a {
-	color: var(--secondary-color);
+footer .more-info {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+footer .more-info .logo img {
+	height: 150px;
+}
+
+.social-footer
+{
 	text-decoration: none;
 }
 
-footer a:hover {
+.social-footer:hover {
+	color: var(--gold);
+}
+
+.extra-info .footer-heading {
+	font-weight: 800;
+	margin-bottom: 10px;
+	color: var(--gold);
+}
+
+.info-developer {
+	text-align: center;
+}
+
+.info-developer a {
+	color: var(--gold);
+	text-decoration: none;
+}
+
+.info-developer a:hover {
 	text-decoration: underline;
 }
