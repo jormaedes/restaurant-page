@@ -1,5 +1,6 @@
 import path from "node:path";
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { Generator } from "webpack";
 
 export default {
 	mode: 'development',
@@ -26,6 +27,20 @@ export default {
 			{
 				test: /\.html$/i,
 				use: ['html-loader'],
+			},
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				type: "asset/resource",
+				generator: {
+					filename: 'assets/images/[name][ext]'
+				}
+			},
+			{
+				test: /\.(mp4|webm|ogg)$/,
+				type: 'asset/resource',
+				generator: {
+					filename: 'assets/videos/[name][ext]'
+				}
 			}
 		],
 	},
