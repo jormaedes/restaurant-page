@@ -202,34 +202,6 @@ video#background-video {
 	gap: 10px;
 }
 
-#to-night {
-	background: var(--surface);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
-}
-
-#img-chef-container {
-	max-width: 1200px;
-	position: relative;
-}
-
-#img-drink-container {
-	position: relative;
-}
-
-#img-chef-container img, #img-drink-container img {
-	height: 500px;
-	object-fit: cover;
-}
-
-.title-img-tonight {
-	position: absolute;
-	bottom: 24px;
-	left: 32px;
-}
-
 .container-menu {
 	flex: 1;
 	width: 100%;
@@ -318,6 +290,68 @@ video#background-video {
 	margin-bottom: 10px;
 	color: var(--primary-color);
 }
+
+/* ── TONIGHT ──────────────────────────────────────── */
+#to-night {
+	border-top: 1px solid var(--border);
+}
+
+.tonight-header {
+	text-align: center;
+	margin-bottom: 56px;
+}
+
+.tonight-header h2 {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 40px;
+	font-weight: 300;
+	color: var(--text);
+	margin: 0;
+}
+
+.gold-line {
+	width: 40px;
+	height: 1px;
+	background: var(--gold);
+	margin: 12px auto 16px;
+}
+
+.container-tonight {
+	display: grid;
+	grid-template-columns: 1.4fr 1fr;
+	gap: 2px;
+	background: var(--border);
+}
+
+.tonight-card {
+	position: relative;
+	overflow: hidden;
+	background: var(--surface);
+}
+
+.tonight-card img {
+	width: 100%;
+	height: 420px;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.6s ease;
+}
+
+.tonight-card:hover img {
+	transform: scale(1.04);
+}
+
+.title-img-tonight {
+	position: absolute;
+	bottom: 0; left: 0; right: 0;
+	padding: 20px 24px;
+	background: linear-gradient(to top, rgba(15,15,15,0.85), transparent);
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 20px;
+	color: var(--text);
+	margin: 0;
+}
+
 
 /* ── FOOTER ───────────────────────────────────────── */
 footer {
