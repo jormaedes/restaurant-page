@@ -83,13 +83,14 @@ Through this project, I learned:
 
 ## 🔮 Future Improvements
 
-- [ ] Add a custom logo and favicon for better branding
-- [ ] Implement custom fonts to enhance typography
-- [ ] Expand the menu section with more dishes and categories
-- [ ] Improve the About section layout and content
-- [ ] Add smooth page transitions/animations between sections
-- [ ] Implement a "Make Reservation" button with modal functionality
-- [ ] Create a Contact section with location map and contact form
+- [x] Add a custom logo and favicon for better branding
+- [x] Implement custom fonts to enhance typography
+- [x] Expand the menu section with more dishes and categories
+- [x] Improve the About section layout and content
+- [x] Add smooth page transitions/animations between sections
+- [x] Implement a "Make Reservation" button with modal functionality
+- [x] Create a Contact section with location map and contact form
+- [ ] Implement Responsive design
 
 ## 📝 License
 
