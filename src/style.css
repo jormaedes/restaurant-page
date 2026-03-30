@@ -48,6 +48,7 @@ header {
 .container .logo h1 {
 	color: var(--gold);
 	text-transform: uppercase;
+	font-family: var(--font-heading);
 }
 
 .container nav {
