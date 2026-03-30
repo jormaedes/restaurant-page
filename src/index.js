@@ -3,15 +3,22 @@ import { renderHomePage } from './js/home';
 import { createFooter } from './js/create-footer';
 import { renderMenuPage } from './js/menu';
 import { renderAboutPage } from './js/about';
+import { createReservationPage } from './js/reservation';
 
 const content = document.getElementById('content');
 const homeBtn = document.getElementById('home-btn');
 const menuBtn = document.getElementById('menu-btn');
 const aboutBtn = document.getElementById('about-btn');
-const body = document.querySelector('body'); 
+const body = document.querySelector('body');
 
 homeBtn.addEventListener('click', (e) => {
 	renderHomePage(content, e.target, menuBtn);
+	const openReserve = [...document.querySelectorAll('.btn-reserve-table')];
+	openReserve.forEach((el)=>{
+		el.addEventListener('click', ()=> {
+			createReservationPage(content);
+		});
+	});
 });
 
 menuBtn.addEventListener('click', (e) => {
@@ -25,6 +32,12 @@ aboutBtn.addEventListener('click', (e) => {
 function firstRender() {
 	body.appendChild(createFooter());
 	renderHomePage(content, homeBtn, menuBtn);
-}
+	const openReserve = [...document.querySelectorAll('.btn-reserve-table')];
+	openReserve.forEach((el)=>{
+		el.addEventListener('click', ()=> {
+			createReservationPage(content);
+		});
+	});
+}	
 
 firstRender();
