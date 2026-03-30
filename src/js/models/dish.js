@@ -1,6 +1,6 @@
 export class Dish
 {
-	constructor(name, desc, price, categ, imgSrc) {
+	constructor(name, desc, categ, price, imgSrc) {
 		this.name = name;
 		this.desc = desc;
 		this.price = price;
