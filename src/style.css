@@ -45,8 +45,9 @@ header {
 	flex-wrap: wrap;
 }
 
-.container .logo img {
-	height: 90px;
+.container .logo h1 {
+	color: var(--gold);
+	text-transform: uppercase;
 }
 
 .container nav {
@@ -86,6 +87,9 @@ header {
 .active {
 	color: var(--gold);
 }
+/* ******************************************** */
+/* ***************** HOME PAGE  *****************/
+/* ******************************************** */
 
 #content {
 	flex: 1;
@@ -198,102 +202,6 @@ header {
 	color: var(--white-color);
 	font-size: 64px;
 }
-
-.container-tonight {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
-}
-
-.container-menu {
-	flex: 1;
-	width: 100%;
-}
-
-.container-menu h2 {
-	text-align: center;
-	margin: 20px 0;
-	color: var(--primary-color);
-}
-
-.dishes-container {
-	max-width: 1200px;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));	
-	gap: 10px;
-}
-
-.dish-card {
-	background: var(--white-color);
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
-	display: flex;
-	gap: 10px;
-	padding: 10px;
-	align-items: center;
-	color: var(--primary-color);
-}
-
-.dish-info {
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
-	justify-content: space-between;
-}
-
-.price {
-	font-weight: bold;
-	font-size: 18px;
-	color: var(--secondary-color);
-}
-
-.dish-card img {
-	width: 150px;
-	height: 150px;
-	object-fit: cover;
-}
-
-.container-about {
-	width: 100%;
-	flex: 1;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	background-color: rgba(0, 0, 0, 0.5);
-	background-blend-mode: multiply;
-	width: 100%;
-}
-
-.container-about h2 {
-	margin-top: 20px;
-	text-align: center;
-	color: var(--white-color);
-}
-
-.who-we-are,
-.what-we-do,
-.contact {
-	margin: 0 auto;
-	background: var(--white-color);
-	max-width: 700px;
-	padding: 16px;
-	border-radius: 10px;
-}
-
-.who-we-are h3,
-.what-we-do h3,
-.contact h3 {
-	margin-bottom: 10px;
-	color: var(--primary-color);
-}
-
 /* ── SECTIONS (alinhamento comum) ─────────────────── */
 #our-philosophy,
 #to-night {
@@ -411,6 +319,95 @@ header {
 	margin: 0;
 }
 
+/*  */
+.container-menu {
+	flex: 1;
+	width: 100%;
+}
+
+.container-menu h2 {
+	text-align: center;
+	margin: 20px 0;
+	color: var(--primary-color);
+}
+
+.dishes-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));	
+	gap: 10px;
+}
+
+.dish-card {
+	background: var(--white-color);
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	display: flex;
+	gap: 10px;
+	padding: 10px;
+	align-items: center;
+	color: var(--primary-color);
+}
+
+.dish-info {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	justify-content: space-between;
+}
+
+.price {
+	font-weight: bold;
+	font-size: 18px;
+	color: var(--secondary-color);
+}
+
+.dish-card img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+}
+
+.container-about {
+	width: 100%;
+	flex: 1;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-blend-mode: multiply;
+	width: 100%;
+}
+
+.container-about h2 {
+	margin-top: 20px;
+	text-align: center;
+	color: var(--white-color);
+}
+
+.who-we-are,
+.what-we-do,
+.contact {
+	margin: 0 auto;
+	background: var(--white-color);
+	max-width: 700px;
+	padding: 16px;
+	border-radius: 10px;
+}
+
+.who-we-are h3,
+.what-we-do h3,
+.contact h3 {
+	margin-bottom: 10px;
+	color: var(--primary-color);
+}
 
 /* ── FOOTER ───────────────────────────────────────── */
 footer {
@@ -488,4 +485,30 @@ footer {
 .info-developer a {
 	color: var(--gold);
 	text-decoration: none;
+}
+
+/* ********************** */
+/* ****** ANIMATIONS ******/
+/* ********************** */
+
+/* ── ESTADO INICIAL (antes de entrar no viewport) ── */
+.anim-from-left {
+	opacity: 0;
+	transform: translateX(-48px);
+	transition: opacity 0.7s ease, transform 0.7s ease;
+	transition-delay: var(--delay, 0s);
+}
+
+.anim-from-right {
+	opacity: 0;
+	transform: translateX(48px);
+	transition: opacity 0.7s ease, transform 0.7s ease;
+	transition-delay: var(--delay, 0s);
+}
+
+/* ── ESTADO FINAL (quando o observer dispara) ─────── */
+.anim-from-left.visible,
+.anim-from-right.visible {
+	opacity: 1;
+	transform: translateX(0);
 }
