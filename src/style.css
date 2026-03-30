@@ -566,6 +566,43 @@ header {
 	color: var(--gold);
 }
 
+/* ── FADE UP (social + mapa) ──────────────────────── */
+.anim-fade-up {
+	opacity: 0;
+	transform: translateY(32px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+	transition-delay: var(--delay, 0s);
+}
+
+.anim-fade-up.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ── IMAGEM — efeito de zoom suave no hover ───────── */
+.about-left {
+	overflow: hidden;
+}
+
+.about-left img {
+	transition: transform 0.6s ease;
+}
+
+.about-left:hover img {
+	transform: scale(1.04);
+}
+
+/* ── ÍCONES DE CONTACTO — entrada escalonada ─────── */
+.informations > div {
+	opacity: 0;
+	transform: translateX(24px);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.contact.visible .informations > div:nth-child(1) { opacity: 1; transform: translateX(0); transition-delay: 0.1s; }
+.contact.visible .informations > div:nth-child(2) { opacity: 1; transform: translateX(0); transition-delay: 0.22s; }
+.contact.visible .informations > div:nth-child(3) { opacity: 1; transform: translateX(0); transition-delay: 0.34s; }
+
 /* ── FOOTER ───────────────────────────────────────── */
 footer {
 	background: var(--surface);
