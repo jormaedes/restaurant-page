@@ -90,7 +90,7 @@ Through this project, I learned:
 - [x] Add smooth page transitions/animations between sections
 - [x] Implement a "Make Reservation" button with modal functionality
 - [x] Create a Contact section with location map and contact form
-- [ ] Implement Responsive design
+- [x] Implement Responsive design
 
 ## 📝 License
 

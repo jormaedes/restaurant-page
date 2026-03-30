@@ -152,7 +152,7 @@ header {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	background-color: rgba(0, 0, 0, .9);
+	background-color: rgba(0, 0, 0, .8);
 	z-index: 1;
 	height: 100vh;
 	max-height: 100vh;
@@ -833,4 +833,194 @@ footer {
 .anim-from-right.visible {
 	opacity: 1;
 	transform: translateX(0);
+}
+
+
+/* ══════════════════════════════════════════
+   TABLET — 1024px
+══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+	.container-philo {
+		gap: 40px;
+	}
+
+	.more-info {
+		grid-template-columns: 1fr 1fr;
+		gap: 32px;
+	}
+
+	.container-tonight {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#our-philosophy,
+	#to-night {
+		padding: 64px 24px;
+	}
+}
+
+/* ══════════════════════════════════════════
+   TABLET PEQUENO — 768px
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+	/* ── HEADER ── */
+	.container {
+		justify-content: center;
+	}
+
+	.container nav {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	/* ── HERO ── */
+	.container-home h2#main-title {
+		font-size: 40px;
+		padding: 0 16px;
+	}
+
+	.container-home {
+		padding: 0 8px;
+	}
+
+	/* ── FILOSOFIA ── */
+	.container-philo {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	#philo-img {
+		order: -1;
+	}
+
+	#philo-img img {
+		aspect-ratio: 16/9;
+	}
+
+	/* ── TONIGHT ── */
+	.container-tonight {
+		grid-template-columns: 1fr;
+	}
+
+	.tonight-card img {
+		height: 280px;
+	}
+
+	/* ── ABOUT ── */
+	.container-about {
+		flex-direction: column;
+	}
+
+	.container-about .about-left {
+		width: 100%;
+		height: 320px;
+	}
+
+	.social-media-about {
+		justify-content: flex-start;
+	}
+
+	/* ── RESERVATION ── */
+	.personal-info {
+		grid-template-columns: 1fr;
+	}
+
+	.reservation-details {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	/* ── FOOTER ── */
+	.more-info {
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+	}
+
+	footer {
+		padding: 40px 24px 24px;
+	}
+}
+
+/* ══════════════════════════════════════════
+   MOBILE — 480px
+══════════════════════════════════════════ */
+@media (max-width: 480px) {
+	/* ── HERO ── */
+	.container-home {
+		height: calc(100vh - 111px);
+	}
+
+	#background-video {
+		height: calc(100vh - 114px);
+	}
+	
+
+	.container-home h2#main-title {
+		font-size: 28px;
+	}
+
+	#scroll-indicator {
+		bottom: 24px;
+	}
+
+	/* ── TONIGHT ── */
+	.tonight-card img {
+		height: 220px;
+	}
+
+	.container-about {
+		padding: 10px;
+	}
+
+	.tonight-header h2,
+	#philo-text h2 {
+		font-size: 28px;
+	}
+
+	#our-philosophy,
+	#to-night {
+		padding: 48px 16px;
+	}
+
+	/* ── MENU ── */
+	.buttons-category {
+		flex-wrap: wrap;
+	}
+
+	.dish-card {
+		width: 100%;
+		max-width: 340px;
+	}
+
+	/* ── RESERVATION ── */
+	.container-reservation {
+		margin: 40px auto;
+		padding: 0 20px;
+	}
+
+	.reserv-header h2 {
+		font-size: 36px;
+	}
+
+	.reservation-details {
+		grid-template-columns: 1fr;
+	}
+
+	.about-right h2 {
+		font-size: 18px;
+	}
+
+	.about-right p,
+	.informations span {
+		font-size: 16px;
+	}
+
+	/* ── FOOTER ── */
+	.more-info {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.info-developer {
+		font-size: 10px;
+	}
 }
